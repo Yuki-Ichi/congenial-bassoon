@@ -1,0 +1,58 @@
+\section*{(1)}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[
+  > = latex,
+  dot/.style = {draw,fill,circle,inner sep=1pt},
+  arrow inside/.style = {postaction=decorate,decoration={markings,mark=at position .55 with \arrow{>}}}
+  ]
+  %\draw[<->] (0,6) node[above right] {$P$} |- (6,0) node[right] {$V$};
+  %\draw[->] (0,0) node[above] {$P$} %|- (6,0) node[right] {$V$};
+  \draw[->] (0,0) -- (8,0) node[right]{$X$};
+  \draw[->] (0,0) -- (0,5) node[left]{$T$};
+  \node[dot,label={right:$A(T',X_1')$}] (@a) at (6,4) {};
+  \node[dot,label={below left:$B(T',X_0')$}] (@b) at (2.5,4) {};
+  \node[dot,label={below left:$C(T,X_0)$}] (@c) at (4,1.5) {};
+  \node[dot,label={right:$D(T,X_1)$}] (@d) at (7.5,1.5) {};
+  \node[dot,label={right:$*(T^*,X^*)$}] (@k) at (5.5,.5) {};
+  
+
+  \draw[arrow inside] (@b) to[ left=20] (@a);
+  \draw[arrow inside] (@a) to[looseness=.9,bend right=20] (@d);
+  \draw[arrow inside] (@d) to[right=20] (@c);
+  \draw[arrow inside] (@c) to[looseness=.9,bend left=20] (@b);
+  \draw[arrow inside] (@k) to[looseness=.3,bend left=20] (@c);
+  \draw[dashed] (@a) to [left] (0,4);
+  \draw[dashed] (@c) to [left] (0,1.5);
+  \draw (-.98,4.0) node {$T'$};
+  \draw (-.98,1.5) node {$T$};
+
+\end{tikzpicture}
+\caption{題議のCarnot circle}
+\label{carnot}
+\end{figure}
+
+
+$(T^*,X^*)$の取り方より$S(T,X_0) = S(T',X_0')$である.つまり、$S(B)=S(C)$\\
+またここで、iq processより $Q = -\Delta F $だから
+\[
+  Q(B\rightarrow A) = T'(S(A)-S(B))
+\]
+\[
+  Q(C\rightarrow D) = T(S(D)-S(C))
+\]
+であり、Carnot の定理より,
+\[
+  \frac{Q(B\rightarrow A)}{Q(C\rightarrow D)} = \frac{T'}{T}
+\]
+であるから以上の式をあわせて、
+\[
+S(A)-S(B)=S(D)-S(C))
+\]
+S(B)=S(C)より$S(A) = S(D)$
+
+
+
+
+

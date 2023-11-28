@@ -1,0 +1,153 @@
+\section*{(4)}
+\subsection*{(a)}
+この問題は以下の6つの式を覚えれば完答できます.何回も紙にかいて覚えましょう.
+\begin{equation}
+dU = TdS-pdV+\mu dN
+\end{equation}
+\begin{equation}
+dS = \frac{1}{T}dU+\frac{p}{T}dV-\frac{\mu}{T}dN
+\end{equation}
+\begin{equation}
+dF = -SdT-pdV+\mu dN
+\end{equation}
+\begin{equation}
+H = U + pV
+\end{equation}
+\begin{equation}
+\Omega = F - \mu N
+\end{equation}
+\begin{equation}
+G = F + pV
+\end{equation}
+
+以上の式を覚えたら次のステップとして$dH,\Omega,G$を求める.例えば$dH$は下記のように求める.
+\begin{align}
+  dH
+  &=dU + Vdp + pdV\\
+  &=TdS-pdV+\mu dN + Vdp + pdV\\
+  &=TdS + Vdp +\mu dN 
+\end{align}
+ここでは(1)の式を用いて$dH$を求めた.同様に$\Omega,G$を求めた結果を下に示す.
+\begin{equation}
+d\Omega = -SdT-pdV-Nd \mu
+\end{equation}
+\begin{equation}
+  dG = -SdT+Vdp+\mu dN
+\end{equation}
+
+\color{blue}以上式(1),(2),(3),(9),(10),(11)を用いて問題を解いていく\color{black}
+
+$\frac{\partial U}{\partial S}\big)_{V,N}$の場合を考える.式(2)を用いる.$V,N$は固定されているから
+式(2)の$-pdV+\mu dN$は無視して,$dS$の係数$T$が答えである.
+\begin{equation}
+  \frac{\partial U}{\partial S}\big)_{V,N} = -S \tag{Answer-1}
+\end{equation}
+
+$\frac{\partial H}{\partial p}\big)_{S,N}$の場合を考える.式(9)を用いる.$S,N$は固定されているから
+式(9)の$TdS + \mu dN $は無視して,$dp$の係数$V$が答えである.
+\begin{equation}
+  \frac{\partial H}{\partial p}\big)_{S,N} = V \tag{Answer-2}
+\end{equation}
+
+$\frac{\partial H}{\partial S}\big)_{p,N}$の場合を考える.式(9)を用いる.$p,N$は固定されているから
+式(9)の$Vdp +\mu dN $は無視して,$dS$の係数$T$が答えである.
+\begin{equation}
+  \frac{\partial H}{\partial S}\big)_{p,N} = T \tag{Answer-3}
+\end{equation}
+
+このようにして他の問題を解くと下記のような結果になる.
+\begin{align}
+  \frac{\partial G}{\partial N}\bigg)_{T,p} &= \mu \tag{Answer-4} \\
+  \frac{\partial \Omega}{\partial V}\bigg)_{T,\mu} &= -p \tag{Answer-5} \\
+  \frac{\partial F}{\partial V}\bigg)_{T,N} &= -p \tag{Answer-6} \\
+  \frac{\partial \Omega}{\partial \mu}\bigg)_{T,V} &= -N \tag{Answer-7} \\
+  \frac{\partial F}{\partial T}\bigg)_{V,N} &= -S \tag{Answer-8} \\
+  \frac{\partial G}{\partial T}\bigg)_{p,N} &= -S \tag{Answer-9} \\
+  \frac{\partial U}{\partial N}\bigg)_{S,V} &= \mu \tag{Answer-10}
+\end{align}
+
+\color{red}この問題では(4),(5),(6)を覚えず,(9),(10),(11)を覚えてテストに挑むのも戦略の一つである.\\
+好きな戦略をとることを勧める.
+\color{black}
+
+
+
+\subsection*{(b)}
+(Answer-9)から
+\[S(T,p,N) = -\frac{\partial G}{\partial T}\bigg)_{p,N}\]
+この式に対して$N$で偏微分すると,
+\begin{align*}
+  \frac{\partial}{\partial N} S(T,p,N)
+  &=-\frac{\partial}{\partial N}\bigg)_{T,p} \frac{\partial G}{\partial T}\bigg)_{p,N}\\
+  &= -\frac{\partial}{\partial T}\bigg)_{p,N} \frac{\partial G}{\partial N}\bigg)_{T,p}\\
+  &=-\frac{\partial}{\partial T} \mu (T,p,N)
+\end{align*}
+ただし,最後の式変形は(Answer-4)を用いた.\\\\
+同様にして,(Answer-8)から
+\[S(T,V,N) = -\frac{\partial F}{\partial T}\bigg)_{V,N}\]
+この式に対して$V$で偏微分すると,
+\begin{align*}
+  \frac{\partial}{\partial V} S(T,V,N)
+  &=-\frac{\partial}{\partial V}\bigg)_{T,N} \frac{\partial F}{\partial T}\bigg)_{V,N}\\
+  &= -\frac{\partial}{\partial T}\bigg)_{V,N} \frac{\partial F}{\partial V}\bigg)_{T,N}\\
+  &=\frac{\partial}{\partial T} p(T,V,N)
+\end{align*}
+
+
+\subsection*{(c)}
+\[U(T,V,N) = F(T,V,N) + TS(T,V,N)\]
+この式を$V$で偏微分をすると
+\begin{align*}
+\frac{\partial U}{\partial V}\bigg)_{T,N} 
+&= \frac{\partial F}{\partial V}\bigg)_{T,N} + T \frac{\partial S}{\partial V}\bigg)_{T,N} \\
+&=-p + T \frac{\partial p}{\partial T}\bigg)_{T,N}
+\end{align*}
+ここで最後の式変形では,(Answer-6)と設問(b)の結果を用いた.
+
+\subsection*{(d)}
+式(9)より
+\begin{align*}
+C_p
+& = \frac{\partial H}{\partial T}\bigg)_{p,N} \\
+& = T \frac{\partial S}{\partial T}\bigg)_{p,N} \\
+& = - T \frac{\partial^2}{\partial T^2} G \bigg)_{p,N}
+\end{align*}
+最後の変形は(Answer-9)を用いた.
+
+\subsection*{(e)}
+式(1)より
+\[C_V = \frac{\partial U}{\partial T}\bigg)_{V,N} = T \frac{\partial S}{\partial T}\bigg)_{V,N}  \]
+また,設問(d)の式の式変形より
+\[C_p = T \frac{\partial S}{\partial T}\bigg)_{p,N}\]
+であり
+\[\tilde{S} (T,p,N) =  S(T,V(T,p,N),N)\]
+として,両辺を$T$で偏微分すると
+\begin{align*}
+  \frac{\partial \tilde{S}}{\partial T}\bigg)_{p,N} 
+  &= \frac{\partial S}{\partial T}\bigg)_{p,N}\\
+  &= \frac{\partial S}{\partial T}\bigg)_{V,N} + \frac{\partial S}{\partial V}\bigg)_{T,N} \frac{\partial V}{\partial T}\bigg)_{p,N}
+\end{align*}
+よって
+\begin{align*}
+C_p - C_V 
+&=T \frac{\partial S}{\partial V}\bigg)_{T,N} \frac{\partial V}{\partial T}\bigg)_{p,N}\\
+&=T \frac{\partial p}{\partial T}\bigg)_{V,N} \frac{\partial V}{\partial T}\bigg)_{p,N}
+\end{align*}
+最後の式変形は設問(b)の結果を用いた.
+
+\subsection*{(f)}
+Fの示量性より
+\[F(T,\lambda V、\lambda N)  =  \lambda F(T,V、N)\]
+両辺を$\lambda$で偏微分すると
+\[\frac{\partial}{\partial (\lambda V)} F(T,\lambda V,\lambda N) \frac{\partial (\lambda V)}{\partial \lambda }
++ \frac{\partial}{\partial (\lambda N)} F(T,\lambda V,\lambda N) \frac{\partial (\lambda N)}{\partial \lambda }
+=F(T,V,N)\]
+(Answer-6)と$\frac{\partial F}{\partial N}\big)_{T,V} = \mu$より
+\[-V p(T,\lambda V,\lambda N) + N \mu(T,\lambda V,\lambda N) = F(T,V,N)\]
+$p,\mu$の示強性より,
+\[p(T,\lambda V,\lambda N) = p(T,V,N)\]
+\[\mu(T,\lambda V,\lambda N) = \mu(T,V,N)\]
+であるから,
+\[F(T,V,N) = -V p(T,V,N) + N \mu(T, V, N) \]
+$F(T,V,N) = -TS(T,V,N) + U(T,V,N) $より
+\[U=TS - pV + \mu N\]
